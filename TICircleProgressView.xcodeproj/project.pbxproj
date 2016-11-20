@@ -157,14 +157,18 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Todd Isaacs";
 				TargetAttributes = {
 					4E50C22C1CC920D4007FEBBB = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 9C759Q4CFH;
+						LastSwiftMigration = 0810;
 					};
 					4E50C2401CC920D4007FEBBB = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 9C759Q4CFH;
+						LastSwiftMigration = 0810;
 						TestTargetID = 4E50C22C1CC920D4007FEBBB;
 					};
 				};
@@ -272,8 +276,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -317,8 +323,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -337,6 +345,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -345,10 +354,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9C759Q4CFH;
 				INFOPLIST_FILE = TICircleProgress/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teisaacs.TICircleProgress;
 				PRODUCT_NAME = TICircleProgressView;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -356,10 +367,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9C759Q4CFH;
 				INFOPLIST_FILE = TICircleProgress/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teisaacs.TICircleProgress;
 				PRODUCT_NAME = TICircleProgressView;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -367,10 +380,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9C759Q4CFH;
 				INFOPLIST_FILE = TICircleProgressTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teisaacs.TICircleProgressTests;
 				PRODUCT_NAME = TICircleProgressView;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TICircleProgressView.app/TICircleProgressView";
 			};
 			name = Debug;
@@ -379,10 +394,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9C759Q4CFH;
 				INFOPLIST_FILE = TICircleProgressTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teisaacs.TICircleProgressTests;
 				PRODUCT_NAME = TICircleProgressView;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TICircleProgressView.app/TICircleProgressView";
 			};
 			name = Release;
@@ -406,6 +423,7 @@
 				4E50C24C1CC920D4007FEBBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E50C24D1CC920D4007FEBBB /* Build configuration list for PBXNativeTarget "TICircleProgressViewTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +432,7 @@
 				4E50C24F1CC920D4007FEBBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

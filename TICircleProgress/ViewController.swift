@@ -20,10 +20,10 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     slider.value = circleProgressView.progress
     
-    manualProgressView.backgroundColor = UIColor.clearColor()
+    manualProgressView.backgroundColor = UIColor.clear
     manualProgressView.progress = slider.value
-    manualProgressView.trackColor = UIColor.orangeColor()
-    manualProgressView.trackBackgroundColor = UIColor.brownColor()
+    manualProgressView.trackColor = UIColor.orange
+    manualProgressView.trackBackgroundColor = UIColor.brown
     manualProgressView.fontName = "BradleyHandITCTT-Bold"
     manualProgressView.label = "Tested"
     manualProgressView.trackWidth = 6
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
-  @IBAction func slideChanged(sender: UISlider) {
+  @IBAction func slideChanged(_ sender: UISlider) {
     circleProgressView.progress = sender.value
     //manualProgressView.progress = sender.value
   }
