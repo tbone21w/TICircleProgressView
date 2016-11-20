@@ -8,23 +8,23 @@
 import UIKit
 
 @IBDesignable
-class TICircleProgressView: UIView {
+public class TICircleProgress: UIView {
   
   @IBInspectable
-  var trackBackgroundColor:UIColor = UIColor(red: 0.652, green: 0.800, blue: 0.320, alpha: 1.000)
+  public var trackBackgroundColor:UIColor = UIColor(red: 0.652, green: 0.800, blue: 0.320, alpha: 1.000)
   
   @IBInspectable
-  var trackColor:UIColor = UIColor(red: 0.797, green: 0.320, blue: 0.800, alpha: 1.000)
+  public var trackColor:UIColor = UIColor(red: 0.797, green: 0.320, blue: 0.800, alpha: 1.000)
   
   @IBInspectable
-  var progress: Float = 0.0 {
+  public var progress: Float = 0.0 {
     didSet {
       setNeedsDisplay()
     }
   }
   
   @IBInspectable
-  var fontName: String = "Arial" {
+  public var fontName: String = "Arial" {
     didSet {
       fontValidated = false
       setNeedsDisplay()
@@ -32,17 +32,17 @@ class TICircleProgressView: UIView {
   }
   
   @IBInspectable
-  var displaySize: CGFloat = 35
+  public var displaySize: CGFloat = 35
   
   @IBInspectable
-  var labelSize: CGFloat = 10
+  public var labelSize: CGFloat = 10
   
   @IBInspectable
-  var trackWidth: CGFloat = 10
+  public var trackWidth: CGFloat = 10
   
   
   @IBInspectable
-  var label: String = "Complete"
+  public var label: String = "Complete"
   
   //selected font to use
   fileprivate var font: UIFont!
@@ -52,7 +52,7 @@ class TICircleProgressView: UIView {
   
   
   
-  override func draw(_ rect: CGRect) {
+  override public func draw(_ rect: CGRect) {
     drawProgressView()
   }
   

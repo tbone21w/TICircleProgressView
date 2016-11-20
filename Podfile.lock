@@ -1,0 +1,22 @@
+PODS:
+  - TICircleProgress (1.0.0)
+
+DEPENDENCIES:
+  - TICircleProgress (from `https://github.com/toddisaacs/TICircleProgress.git`, tag `1.0.0`)
+
+EXTERNAL SOURCES:
+  TICircleProgress:
+    :git: https://github.com/toddisaacs/TICircleProgress.git
+    :tag: 1.0.0
+
+CHECKOUT OPTIONS:
+  TICircleProgress:
+    :git: https://github.com/toddisaacs/TICircleProgress.git
+    :tag: 1.0.0
+
+SPEC CHECKSUMS:
+  TICircleProgress: ab39b752b970f07c316084795109c36243105475
+
+PODFILE CHECKSUM: 4604b1d309aefcffbd5a9bc18fb9c37a031a5004
+
+COCOAPODS: 1.2.0.beta.1

@@ -31,7 +31,7 @@
                                     <action selector="slideChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="vq5-9W-LCN"/>
                                 </connections>
                             </slider>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a7e-J7-JUV" customClass="TICircleProgressView" customModule="TICircleProgressView" customModuleProvider="target">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a7e-J7-JUV" customClass="TICircleProgress" customModule="TICircleProgress">
                                 <rect key="frame" x="235" y="43" width="280" height="200"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>

@@ -7,14 +7,15 @@
 //
 
 import UIKit
+import TICircleProgress
 
 class ViewController: UIViewController {
 
-  @IBOutlet var circleProgressView: TICircleProgressView!
+  @IBOutlet var circleProgressView: TICircleProgress!
   
   @IBOutlet var slider: UISlider!
   
-  let manualProgressView = TICircleProgressView(frame: CGRect(x: 20, y: 100, width: 100, height: 100))
+  let manualProgressView = TICircleProgress(frame: CGRect(x: 20, y: 100, width: 100, height: 100))
 
   override func viewDidLoad() {
     super.viewDidLoad()

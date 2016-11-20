@@ -1,0 +1,27 @@
+{
+  "name": "TICircleProgress",
+  "version": "1.0.0",
+  "summary": "Circular progress indicator",
+  "description": "Circular progress indicator draws progress in a circular ring from 0 - 100% and includes test display in the center",
+  "homepage": "https://github.com/toddisaacs/TICircleProgressView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE.txt"
+  },
+  "authors": "Todd Isaacs",
+  "social_media_url": "http://twitter.com/toddisaacs",
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source": {
+    "git": "https://github.com/toddisaacs/TICircleProgress.git",
+    "tag": "1.0.0"
+  },
+  "source_files": [
+    "TICircleProgress",
+    "TICircleProgress/**/*.{h,m,swift}"
+  ],
+  "pod_target_xcconfig": {
+    "SWIFT_VERSION": "3"
+  }
+}
