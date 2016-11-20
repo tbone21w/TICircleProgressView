@@ -5,9 +5,8 @@ Circular progress indicator that displays the progress from 0-100%.
 
 Requirements
 ----
-Xcode 6
-swift
-iOS 7
+Xcode 8
+swift 3
 
 Usage
 ----
