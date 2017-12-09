@@ -48,7 +48,7 @@ public class TICircleProgress: UIView {
   fileprivate var font: UIFont!
   fileprivate var fontValidated = false
   
-  fileprivate let π:CGFloat = CGFloat(M_PI)
+  fileprivate let π:CGFloat = CGFloat(Double.pi)
   
   
   
@@ -143,11 +143,11 @@ public class TICircleProgress: UIView {
   fileprivate func percentToRadian(_ percent:Float) -> CGFloat {
     var endAngleRadians: CGFloat
     if progress >= 100 {
-      endAngleRadians  = CGFloat((Double(99.99/100 * 360) - Double(90)) * M_PI / 180)
+      endAngleRadians  = CGFloat((Double(99.99/100 * 360) - Double(90)) * Double.pi / 180)
     } else if progress <= 0 {
-      endAngleRadians  = CGFloat((Double(0.3/100 * 360) - Double(90)) * M_PI / 180)
+      endAngleRadians  = CGFloat((Double(0.3/100 * 360) - Double(90)) * Double.pi / 180)
     } else {
-      endAngleRadians  = CGFloat((Double(progress/100 * 360) - Double(90)) * M_PI / 180)
+      endAngleRadians  = CGFloat((Double(progress/100 * 360) - Double(90)) * Double.pi / 180)
     }
     
     return endAngleRadians
@@ -168,7 +168,7 @@ public class TICircleProgress: UIView {
    
    NOTE: this needs some work it is returning values that are too large
    */
-  fileprivate func calcActualFontHeight(_ sampleText: String, fontAttributes: [String: AnyObject]) -> CGFloat {
+  fileprivate func calcActualFontHeight(_ sampleText: String, fontAttributes: [NSAttributedStringKey: Any]) -> CGFloat {
     let drawRect = self.getTargetDrawArea(frame)
     let nsString = NSString(string: label)
     
@@ -232,7 +232,7 @@ public class TICircleProgress: UIView {
     
     let progressFont:UIFont = UIFont(name: font!.fontName, size: displaySize)!
     
-    let progressTextFontAttributes = [NSFontAttributeName: progressFont, NSForegroundColorAttributeName: trackColor, NSParagraphStyleAttributeName: textStyle] as [String : Any]
+    let progressTextFontAttributes:[NSAttributedStringKey: Any] = [NSAttributedStringKey.font: progressFont, NSAttributedStringKey.foregroundColor: trackColor, NSAttributedStringKey.paragraphStyle: textStyle]
     
     let PROGRESS_TEXT_HEIGHT:CGFloat = displaySize + 4
     
@@ -244,7 +244,7 @@ public class TICircleProgress: UIView {
                                      width: drawRect.width,
                                      height: PROGRESS_TEXT_HEIGHT)
     
-    drawText(progressText, fontAttributes: progressTextFontAttributes as [String : AnyObject], frame: progressMessageRect)
+    drawText(progressText, fontAttributes: progressTextFontAttributes as [NSAttributedStringKey : Any], frame: progressMessageRect)
   }
   
   
@@ -262,7 +262,7 @@ public class TICircleProgress: UIView {
     
     let labelFont = UIFont(name: font!.fontName, size: labelSize)!
     
-    let labelTextFontAttributes = [NSFontAttributeName: labelFont, NSForegroundColorAttributeName: trackColor, NSParagraphStyleAttributeName: textStyle] as [String : Any]
+    let labelTextFontAttributes: [NSAttributedStringKey: Any] = [NSAttributedStringKey.font: labelFont, NSAttributedStringKey.foregroundColor: trackColor, NSAttributedStringKey.paragraphStyle: textStyle]
     
     let LABEL_TEXT_HEIGHT:CGFloat = labelSize + 3
     let PROGRESS_TEXT_HEIGHT:CGFloat = displaySize + 3
@@ -276,14 +276,14 @@ public class TICircleProgress: UIView {
                            width: drawRect.width,
                            height: LABEL_TEXT_HEIGHT)
     
-    drawText(labelText, fontAttributes: labelTextFontAttributes as [String : AnyObject], frame: labelRect)
+    drawText(labelText, fontAttributes: labelTextFontAttributes as [NSAttributedStringKey : Any], frame: labelRect)
   }
   
   
   /**
    Draws text in a given rectangle with given attributes
    */
-  fileprivate func drawText(_ text: String, fontAttributes: [String: AnyObject], frame:CGRect) {
+  fileprivate func drawText(_ text: String, fontAttributes: [NSAttributedStringKey : Any], frame:CGRect) {
     let context = UIGraphicsGetCurrentContext()
     context?.saveGState()
     context?.clip(to: frame)

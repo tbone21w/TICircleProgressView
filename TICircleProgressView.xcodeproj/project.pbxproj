@@ -42,8 +42,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		00D3E5A7050D9821A9B178C2 /* Pods-TICircleProgressView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TICircleProgressView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TICircleProgressView/Pods-TICircleProgressView.debug.xcconfig"; sourceTree = "<group>"; };
 		175BDAEE41A3EA17D0FD664C /* Pods_TICircleProgressViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TICircleProgressViewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3BF8610D04397168B9402151 /* Pods-TICircleProgressView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TICircleProgressView.release.xcconfig"; path = "Pods/Target Support Files/Pods-TICircleProgressView/Pods-TICircleProgressView.release.xcconfig"; sourceTree = "<group>"; };
+		374A5DB1CFA970736D03CBB4 /* Pods-TICircleProgressView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TICircleProgressView.release.xcconfig"; path = "Pods/Target Support Files/Pods-TICircleProgressView/Pods-TICircleProgressView.release.xcconfig"; sourceTree = "<group>"; };
 		3D5B4E779F2E1A11A7DFB15F /* Pods-TICircleProgressViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TICircleProgressViewTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TICircleProgressViewTests/Pods-TICircleProgressViewTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4E50C22D1CC920D4007FEBBB /* TICircleProgressView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TICircleProgressView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E50C2301CC920D4007FEBBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +59,6 @@
 		4E50C2531CC92226007FEBBB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		70AAA1042B3127DE7AAB9820 /* Pods_TICircleProgressView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TICircleProgressView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB9CB0C2960E4C099F37159F /* Pods-TICircleProgressViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TICircleProgressViewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TICircleProgressViewTests/Pods-TICircleProgressViewTests.release.xcconfig"; sourceTree = "<group>"; };
-		D5F233C9B13A27CF2CC4EC38 /* Pods-TICircleProgressView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TICircleProgressView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TICircleProgressView/Pods-TICircleProgressView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,10 +138,10 @@
 		ABA334C0B20919CD51C50C7D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D5F233C9B13A27CF2CC4EC38 /* Pods-TICircleProgressView.debug.xcconfig */,
-				3BF8610D04397168B9402151 /* Pods-TICircleProgressView.release.xcconfig */,
 				3D5B4E779F2E1A11A7DFB15F /* Pods-TICircleProgressViewTests.debug.xcconfig */,
 				AB9CB0C2960E4C099F37159F /* Pods-TICircleProgressViewTests.release.xcconfig */,
+				00D3E5A7050D9821A9B178C2 /* Pods-TICircleProgressView.debug.xcconfig */,
+				374A5DB1CFA970736D03CBB4 /* Pods-TICircleProgressView.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -204,12 +204,12 @@
 					4E50C22C1CC920D4007FEBBB = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 9C759Q4CFH;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0910;
 					};
 					4E50C2401CC920D4007FEBBB = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 9C759Q4CFH;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0910;
 						TestTargetID = 4E50C22C1CC920D4007FEBBB;
 					};
 				};
@@ -291,9 +291,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TICircleProgressView/Pods-TICircleProgressView-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/TICircleProgress/TICircleProgress.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TICircleProgress.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -306,13 +309,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TICircleProgressViewTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D0854D78CC2060025E66ADA5 /* [CP] Check Pods Manifest.lock */ = {
@@ -321,13 +327,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TICircleProgressView-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EE07C9994690C30DB163B954 /* [CP] Copy Pods Resources */ = {
@@ -485,9 +494,9 @@
 		};
 		4E50C24B1CC920D4007FEBBB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5F233C9B13A27CF2CC4EC38 /* Pods-TICircleProgressView.debug.xcconfig */;
+			baseConfigurationReference = 00D3E5A7050D9821A9B178C2 /* Pods-TICircleProgressView.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9C759Q4CFH;
 				INFOPLIST_FILE = TICircleProgress/Info.plist;
@@ -495,15 +504,16 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teisaacs.TICircleProgressDemo;
 				PRODUCT_NAME = TICircleProgressView;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		4E50C24C1CC920D4007FEBBB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3BF8610D04397168B9402151 /* Pods-TICircleProgressView.release.xcconfig */;
+			baseConfigurationReference = 374A5DB1CFA970736D03CBB4 /* Pods-TICircleProgressView.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9C759Q4CFH;
 				INFOPLIST_FILE = TICircleProgress/Info.plist;
@@ -511,7 +521,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teisaacs.TICircleProgressDemo;
 				PRODUCT_NAME = TICircleProgressView;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -519,13 +530,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3D5B4E779F2E1A11A7DFB15F /* Pods-TICircleProgressViewTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 9C759Q4CFH;
 				INFOPLIST_FILE = TICircleProgressTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teisaacs.TICircleProgressTests;
 				PRODUCT_NAME = TICircleProgressView;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TICircleProgressView.app/TICircleProgressView";
 			};
 			name = Debug;
@@ -534,13 +547,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AB9CB0C2960E4C099F37159F /* Pods-TICircleProgressViewTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 9C759Q4CFH;
 				INFOPLIST_FILE = TICircleProgressTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teisaacs.TICircleProgressTests;
 				PRODUCT_NAME = TICircleProgressView;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TICircleProgressView.app/TICircleProgressView";
 			};
 			name = Release;
